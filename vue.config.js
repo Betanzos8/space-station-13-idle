@@ -9,6 +9,11 @@ module.exports = {
 
 	publicPath:
 		process.env.FULL_PATH ? "/space-station-13-idle/" : "/",
+	
+	devServer: {
+    	disableHostCheck: true
+	},
+
 
 	configureWebpack: {
 		plugins: [

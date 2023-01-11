@@ -1,24 +1,211 @@
-export const MAX_LEVEL = 50;
+export const MAX_LEVEL = 200;
 
 const BOTTOM = (1 - 2 ** (-1 / 7)) / 75;
 
 // The following is taken from runescape, but heavily modified to make the early 1-5 leveling experience slightly smoother
-export function xpFromLevel(l) {
-	if (l <= 1) return 0;
-	// This realistically doesn't affect anything, so let's get rid of it
-	// let start = (1 / 8) * l * (l - 1);
-
-	let top = 2 ** ((l - 1) / 7) - 1;
-
-	// This is a constant, no need to calculate it here
-	// let bottom = 1 - 2 ** (-1 / 7);
-
-	// This offset will primarily affect the first couple of numbers, lowering them so the leveling experience isn't so awful
-	let offset = 121 - Math.log10((l + 1) * (l + 1) * 0.45 + 1.5) * 230;
-
-	// return Math.floor(start + 75 * top / bottom);
-	// console.log(l, top.toFixed(3), BOTTOM.toFixed(6), offset.toFixed(3));
-	return Math.floor(top / BOTTOM + offset);
+export function xpFromLevel(A) {
+	if (A <= 1) return 0
+	else if (A == 2) return 110
+	else if (A == 3) return 650
+	else if (A == 4) return 1500
+	else if (A == 5) return 2800
+	else if (A == 6) return 4800
+	else if (A == 7) return 7300
+	else if (A == 8) return 10500
+	else if (A == 9) return 14500
+	else if (A == 10) return 19200
+	else if (A == 11) return 25200
+	else if (A == 12) return 32600
+	else if (A == 13) return 41000
+	else if (A == 14) return 50500
+	else if (A == 15) return 61000
+	else if (A == 16) return 75000
+	else if (A == 17) return 91000
+	else if (A == 18) return 115000
+	else if (A == 19) return 142000
+	else if (A == 20) return 171000
+	else if (A == 21) return 202000
+	else if (A == 22) return 235000
+	else if (A == 23) return 270000
+	else if (A == 24) return 310000
+	else if (A == 25) return 353000
+	else if (A == 26) return 398500
+	else if (A == 27) return 448000
+	else if (A == 28) return 503000
+	else if (A == 29) return 561000
+	else if (A == 30) return 621600
+	else if (A == 31) return 687000
+	else if (A == 32) return 755000
+	else if (A == 33) return 829000
+	else if (A == 34) return 910000
+	else if (A == 35) return 1000000
+	else if (A == 35) return 1000000
+	else if (A == 36) return 1100000
+	else if (A == 37) return 1240000
+	else if (A == 38) return 1400000
+	else if (A == 39) return 1580000
+	else if (A == 40) return 1780000
+	else if (A == 41) return 2000000
+	else if (A == 42) return 2250000
+	else if (A == 43) return 2530000
+	else if (A == 44) return 2850000
+	else if (A == 45) return 3200000
+	else if (A == 46) return 3570000
+	else if (A == 47) return 3960000
+	else if (A == 48) return 4400000
+	else if (A == 49) return 4860000
+	else if (A == 50) return 5350000
+	else if (A == 51) return 5860000
+	else if (A == 52) return 6390000
+	else if (A == 53) return 6950000
+	else if (A == 54) return 7530000
+	else if (A == 55) return 8130000
+	else if (A == 56) return 8765100
+	else if (A == 57) return 9420000
+	else if (A == 58) return 10150000
+	else if (A == 59) return 10894000
+	else if (A == 60) return 11655000
+	else if (A == 61) return 12450000
+	else if (A == 62) return 13278000
+	else if (A == 63) return 14138000
+	else if (A == 64) return 15171000
+	else if (A == 65) return 16251000
+	else if (A == 66) return 17377000
+	else if (A == 67) return 18553000
+	else if (A == 68) return 19778000
+	else if (A == 69) return 21055000
+	else if (A == 70) return 22385000
+	else if (A == 71) return 23769000
+	else if (A == 72) return 25209000
+	else if (A == 73) return 26707000
+	else if (A == 74) return 28264000
+	else if (A == 75) return 29882000
+	else if (A == 76) return 31563000
+	else if (A == 77) return 33307000
+	else if (A == 78) return 35118000
+	else if (A == 79) return 36997000
+	else if (A == 80) return 38945000
+	else if (A == 81) return 40965000
+	else if (A == 82) return 43059000
+	else if (A == 83) return 45229000
+	else if (A == 84) return 47476000
+	else if (A == 85) return 49803000
+	else if (A == 86) return 52211000
+	else if (A == 87) return 54704000
+	else if (A == 88) return 57284000
+	else if (A == 89) return 59952000
+	else if (A == 90) return 62712000
+	else if (A == 91) return 65565000
+	else if (A == 92) return 68514000
+	else if (A == 93) return 71561000
+	else if (A == 94) return 74710000
+	else if (A == 95) return 77963000
+	else if (A == 96) return 81323000
+	else if (A == 97) return 84792000
+	else if (A == 98) return 88374000
+	else if (A == 99) return 92071000
+	else if (A == 100) return 95886000
+	else if (A == 101) return 99823000
+	else if (A == 102) return 103885000
+	else if (A == 103) return 108075000
+	else if (A == 104) return 112396000
+	else if (A == 105) return 116853000
+	else if (A == 106) return 121447000
+	else if (A == 107) return 126184000
+	else if (A == 108) return 131066000
+	else if (A == 109) return 136098000
+	else if (A == 110) return 141283000
+	else if (A == 111) return 146626000
+	else if (A == 112) return 152130000
+	else if (A == 113) return 157800000
+	else if (A == 114) return 163640000
+	else if (A == 115) return 169655000
+	else if (A == 116) return 175848000
+	else if (A == 117) return 182225000
+	else if (A == 118) return 188791000
+	else if (A == 119) return 195550000
+	else if (A == 120) return 202507000
+	else if (A == 121) return 209667000
+	else if (A == 122) return 217037000
+	else if (A == 123) return 224620000
+	else if (A == 124) return 232424000
+	else if (A == 125) return 240452000
+	else if (A == 126) return 248712000
+	else if (A == 127) return 257209000
+	else if (A == 128) return 265949000
+	else if (A == 129) return 274939000
+	else if (A == 130) return 284186000
+	else if (A == 131) return 293694000
+	else if (A == 132) return 303473000
+	else if (A == 133) return 313527000
+	else if (A == 134) return 323866000
+	else if (A == 135) return 334495000
+	else if (A == 136) return 345423000
+	else if (A == 137) return 356657000
+	else if (A == 138) return 368206000
+	else if (A == 139) return 380076000
+	else if (A == 140) return 392278000
+	else if (A == 141) return 404818000
+	else if (A == 142) return 417706000
+	else if (A == 143) return 430952000
+	else if (A == 144) return 444564000
+	else if (A == 145) return 458551000
+	else if (A == 146) return 472924000
+	else if (A == 147) return 487693000
+	else if (A == 148) return 502867000
+	else if (A == 149) return 518458000
+	else if (A == 150) return 534476000
+	else if (A == 151) return 550933000
+	else if (A == 152) return 567839000
+	else if (A == 153) return 585206000
+	else if (A == 154) return 603047000
+	else if (A == 155) return 621374000
+	else if (A == 156) return 640199000
+	else if (A == 157) return 659536000
+	else if (A == 158) return 679398000
+	else if (A == 159) return 699798000
+	else if (A == 160) return 720751000
+	else if (A == 161) return 742272000
+	else if (A == 162) return 764374000
+	else if (A == 163) return 787074000
+	else if (A == 164) return 810387000
+	else if (A == 165) return 834329000
+	else if (A == 166) return 858917000
+	else if (A == 167) return 884167000
+	else if (A == 168) return 910098000
+	else if (A == 169) return 936727000
+	else if (A == 170) return 964073000
+	else if (A == 171) return 992154000
+	else if (A == 172) return 1020991000
+	else if (A == 173) return 1050603000
+	else if (A == 174) return 1081010000
+	else if (A == 175) return 1112235000
+	else if (A == 176) return 1144298000
+	else if (A == 177) return 1177222000
+	else if (A == 178) return 1211030000
+	else if (A == 179) return 1245745000
+	else if (A == 180) return 1281393000
+	else if (A == 181) return 1317997000
+	else if (A == 182) return 1355584000
+	else if (A == 183) return 1404179000
+	else if (A == 184) return 1463811000
+	else if (A == 185) return 1534506000
+	else if (A == 186) return 1616294000
+	else if (A == 187) return 1709205000
+	else if (A == 188) return 1813267000
+	else if (A == 189) return 1928513000
+	else if (A == 190) return 2054975000
+	else if (A == 191) return 2192686000
+	else if (A == 192) return 2341679000
+	else if (A == 193) return 2501990000
+	else if (A == 194) return 2673655000
+	else if (A == 195) return 2856710000
+	else if (A == 196) return 3051194000
+	else if (A == 197) return 3257146000
+	else if (A == 198) return 3474606000
+	else if (A == 199) return 3703616000
+	else if (A == 200) return 5555424000
+	else return 555542400000
 }
 
 export function levelFromXP(xp) {

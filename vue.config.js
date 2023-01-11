@@ -13,7 +13,7 @@ module.exports = {
 	devServer: {
     	disableHostCheck: true
 	},
-
+//prueba
 
 	configureWebpack: {
 		plugins: [

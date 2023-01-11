@@ -42,43 +42,14 @@
         <span>Combat</span>
         <span :style="healthStyle">({{playerHealth}}/{{playerMaxHealth}})</span>
       </div>
-      <sidebar-item
-        v-for="job in combatJobs"
-        :key="job.id"
-        id="combat"
-        :text="job.name"
-        :icon="job.icon"
-        :color="job.color"
-        :textColor="getJobColor(job)"
-        :locked="checkJobLocked(job)"
-      >
-        <span>{{getLevelText(job)}}</span>
-      </sidebar-item>
-
+      
       <p class="items-header">Other</p>
       <sidebar-item
         id="customization"
         text="Player"
         :icon="require('@/assets/art/customization/icon.png')"
       />
-      <sidebar-item
-        id="chronosphere"
-        text="Chronosphere"
-        :icon="require('@/assets/art/chrono/icon.png')"
-        :textColor="chronoSpeed != 1 ? '#3ac5ff' : ''"
-      >
-        <span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>
-      </sidebar-item>
-      <sidebar-item
-        id="completion"
-        text="Completion"
-        :icon="require('@/assets/art/sidebar/trophy.png')"
-      />
-      <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
-      <sidebar-item id="about" text="About" :icon="require('@/assets/art/misc/logo-square.png')" />
-      <a class href="https://discord.com/invite/HwbK9XQ" target="_blank">
-        <sidebar-item text="Discord" :icon="require('@/assets/art/misc/discord.png')" />
-      </a>
+      
     </div>
     <img
       class="button-toggle"

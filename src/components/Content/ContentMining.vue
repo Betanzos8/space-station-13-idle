@@ -13,23 +13,20 @@
       <job-info
         infoId="mining"
         :icon="require('@/assets/art/jobinfo/mining.png')"
-        title="Lathius Talram the Shaft Miner says..."
+        title="Chipo Atufe says..."
         :options="[
-					{name: 'Back'},
-					{name: 'Mining?', icon: require('@/assets/art/mining/icon.png'), iconClass:'mx--0'},
-					{name: 'Ore?', icon: require('@/assets/art/mining/SheetIron.png'), iconClass:'mx--2'}
+					{name: 'Back'}					
 				]"
       >
         <template slot="Back">
           <span>
-            No time to chat. Have to get down there and
-            <img
-              class="mx--0"
-              :src="require('@/assets/art/mining/icon.png')"
-            />
-            <b>Mine</b> some
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Ore</b>.
+            The profession of Miner is a difficult one.
+          </span>
+          <span>
+            You must like darkness and mustn't be afraid of taking on Cracklers armed only with a pick.
+          </span>
+          <span>
+           This profession is nevertheless rewarding, you can become rich without too much trouble, as long as you work in the good mines.The essential equipment to the miner is the pick. Take good care of it and don't let it get rusty.
           </span>
         </template>
         <template slot="Mining?">

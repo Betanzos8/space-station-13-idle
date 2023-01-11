@@ -1,81 +1,94 @@
 export const ACTIONS = {
 	mineSand: {
-		time: 1.5,
-		item: "glass",
+		time: 3,
+		item: "iron",
 		icon: require("@/assets/art/mining/OreGlass.png"),
-		xp: .5,
+		xp: 10,
 		requiredLevel: 1
 	},
 	mineIron: {
-		time: 2.0,
-		item: "iron",
+		time: 3,
+		item: "copper",
 		icon: require("@/assets/art/mining/OreIron.png"),
-		xp: 1,
-		requiredLevel: 5
+		xp: 14,
+		requiredLevel: 20
 	},
 	mineSilver: {
-		time: 2.5,
-		item: "silver",
+		time: 3,
+		item: "bronze",
 		icon: require("@/assets/art/mining/OreSilver.png"),
-		xp: 3,
-		requiredLevel: 10
+		xp: 18,
+		requiredLevel: 40
 	},
 	mineGold: {
 		time: 3,
-		item: "gold",
+		item: "cobalt",
 		icon: require("@/assets/art/mining/OreGold.png"),
-		xp: 5,
-		requiredLevel: 15
+		xp: 22,
+		requiredLevel: 60
 	},
 	mineTitanium: {
-		time: 3.5,
-		item: "titanium",
+		time: 3,
+		item: "manganese",
 		icon: require("@/assets/art/mining/OreTitanium.png"),
-		xp: 7,
-		requiredLevel: 20
+		xp: 26,
+		requiredLevel: 80
 	},
 	mineUranium: {
-		time: 4,
-		item: "uranium",
+		time: 3,
+		item: "tin",
 		icon: require("@/assets/art/mining/OreUranium.png"),
-		xp: 10,
-		requiredLevel: 25
+		xp: 30,
+		requiredLevel: 100
 	},
 	minePlasma: {
-		time: 4.5,
-		item: "plasma",
+		time: 3,
+		item: "silicate",
 		icon: require("@/assets/art/mining/OrePlasma.png"),
-		xp: 14,
-		requiredLevel: 30
+		xp: 30,
+		requiredLevel: 100
 	},
 	mineDiamond: {
-		time: 5,
-		item: "diamond",
+		time: 3,
+		item: "silver",
 		icon: require("@/assets/art/mining/OreDiamond.png"),
-		xp: 18,
-		requiredLevel: 35
+		xp: 34,
+		requiredLevel: 120
 	},
 	mineAlien: {
-		time: 5.25,
-		item: "alienalloy",
+		time: 3,
+		item: "bauxite",
 		icon: require("@/assets/art/mining/OreAlien.gif"),
-		xp: 24, // gives a bit more XP than the following/preceding tasks to reward you for researching it early
-		requiredLevel: 35,
-		requiredUpgrade: "alienMining"
+		xp: 38,
+		requiredLevel: 140,
 	},
 	mineBluespace: {
-		time: 5.5,
-		item: "bluespace",
+		time: 3,
+		item: "gold",
 		icon: require("@/assets/art/mining/OreBluespace.png"),
-		xp: 22,
-		requiredLevel: 40
+		xp: 42,
+		requiredLevel: 160
 	},
 	mineBananium: {
-		time: 6,
-		item: "bananium",
+		time: 3,
+		item: "dolomite",
 		icon: require("@/assets/art/mining/OreBanana.png"),
-		xp: 30,
-		requiredLevel: 50
+		xp: 46,
+		requiredLevel: 180
+	},
+	mineBananium: {
+		time: 3,
+		item: "obsidian",
+		icon: require("@/assets/art/mining/OreBanana.png"),
+		xp: 50,
+		requiredLevel: 200
+	},
+	mineBananium: {
+		time: 3,
+		item: "sepiolite",
+		icon: require("@/assets/art/mining/OreBanana.png"),
+		xp: 50,
+		requiredLevel: 200
 	},
 }
 
